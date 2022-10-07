@@ -10,19 +10,19 @@ public class DEA {
     
     private void consume(char ch){
         switch (state){
-            case 0 : 
+            case 0 : // nur ifs
                 if(ch == 'a') state = 1;
                 if(ch == 'd') state = -1; 
                 break;
                 
-            case 1:
-                if(ch == 'a');
+            case 1:  // if-else (alle Fälle)
+                if (ch == 'a');
                 else if (ch == 'b') state = 2;
                 else if (ch == 'c') state = 0;
-                else state = -1;  
+                else state = -1; 
                 break;
                 
-            case 2:
+            case 2:  // switch-case (alle Fälle)
                 switch(ch){
                     case 'a': state = 1; break;
                     case 'b':
